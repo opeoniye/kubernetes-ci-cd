@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  # Postgres login is sensitive
+  POSTGRES_HOST: localhost
+  POSTGRES_DATABASE: bams
+  AWS_BUCKET: bams-dev
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  URL: http://localhost:8100
+  JWT_SECRET: bamsapp
+metadata:
+  name: env-config

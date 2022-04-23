@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: bams
+  region: us-east-1
+
+nodeGroups:
+  - name: bams-1
+    instanceType: m5.large  # t3.micro 4 $0.0104, m5.large 4 $0.096
+    desiredCapacity: 2
+    volumeSize: 20
+    ssh:
+      publicKeyName: bams
+      allow: true

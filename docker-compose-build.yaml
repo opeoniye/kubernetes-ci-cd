@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: reverseproxy
+    image: docker-user/reverseproxy
+  api_user:
+    build:
+      context: api-user
+    image: docker-user/api-user
+  api_feed:
+    build:
+      context: api-feed
+    image: docker-user/api-feed
+  frontend:
+    build:
+      context: frontend
+    image: docker-user/frontend
